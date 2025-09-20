@@ -1,6 +1,7 @@
 package com.example.fridgewatch
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.TextView
@@ -54,20 +55,23 @@ class DashboardActivity : Activity() {
     private fun setupClickListeners() {
         // Notification button click
         notificationLayout.setOnClickListener {
-            Toast.makeText(this, "Notification button clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
         }
         
         // Bottom navigation clicks
         homeIcon.setOnClickListener {
-            Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Already on Home", Toast.LENGTH_SHORT).show()
         }
         
         bellIcon.setOnClickListener {
-            Toast.makeText(this, "Bell clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
         }
         
         menuIcon.setOnClickListener {
-            Toast.makeText(this, "Menu clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
         }
         
         // Status indicator click to toggle online/offline

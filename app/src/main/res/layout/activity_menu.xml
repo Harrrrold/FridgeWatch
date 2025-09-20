@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_blue"
+    android:padding="16dp"
+    tools:context=".MenuActivity">
+
+    <!-- Header Section with Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/back_button_icon"
+            android:scaleType="centerInside" />
+
+        <!-- Menu Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Menu"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Spacer to balance the back button -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <!-- Menu Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <!-- Settings Button -->
+        <LinearLayout
+            android:id="@+id/settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/menu_button_background"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/settings_icon"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- About Us Button -->
+        <LinearLayout
+            android:id="@+id/about_us_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/menu_button_background"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/person_icon"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Terms and Agreement Button -->
+        <LinearLayout
+            android:id="@+id/terms_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/menu_button_background"
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms and Agreement"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Spacer to push bottom navigation down -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:padding="16dp"
+        android:layout_marginStart="-16dp"
+        android:layout_marginEnd="-16dp"
+        android:layout_marginBottom="-16dp">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon"
+            android:tint="@color/white"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/bell_icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/notification_icon"
+            android:tint="@color/white"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_icon"
+            android:tint="@color/white"
+            android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+</LinearLayout>

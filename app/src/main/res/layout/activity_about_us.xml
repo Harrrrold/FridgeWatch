@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_blue"
+    tools:context=".AboutUsActivity">
+
+    <!-- Header Section with Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/back_button_icon"
+            android:scaleType="centerInside" />
+
+        <!-- About Us Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="About Us"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Spacer to balance the back button -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- FridgeWatch Logo Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:elevation="4dp">
+
+                <!-- Logo Icons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Fridge Icon -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/fridge_outline_icon"
+                        android:scaleType="centerInside"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Cloud and Smartphone Icons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- Cloud Icon -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/cloud_outline_icon"
+                            android:scaleType="centerInside"
+                            android:layout_marginBottom="4dp" />
+
+                        <!-- Smartphone Icon -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/smartphone_outline_icon"
+                            android:scaleType="centerInside" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- FRIDGEWATCH Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FRIDGEWATCH"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+
+            </LinearLayout>
+
+            <!-- Main Content Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="24dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="4dp">
+
+                <!-- FridgeWatch Description -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FridgeWatch is an IoT-powered Android application that monitors refrigerators in real-time. Our system detects when the fridge door is open, tracks how long it remains open, and sends instant notifications to your mobile device. This helps prevent food spoilage, reduces energy waste, and ensures better fridge management. FridgeWatch combines IoT technology with a user-friendly app to promote efficiency, convenience, and smarter living."
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Team Introduction -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Our project is developed by a dedicated team:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Team Members -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Christian Rosales – Hardware Lead: Responsible for designing and implementing the sensor system and microcontroller integration.\n\n• Rogin Galford Quinatadcan – Cloud and Database Lead: Handles cloud connectivity, real-time data storage, and database management.\n\n• Harrold Resma – Mobile App Developer: Builds and maintains the Android application, ensuring a user-friendly interface and seamless IoT integration."
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Project Goal -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Together, we aim to create a reliable and innovative solution that combines IoT technology with mobile convenience to make everyday life smarter and more efficient."
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon"
+            android:tint="@color/white"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/bell_icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/notification_icon"
+            android:tint="@color/white"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_icon"
+            android:tint="@color/white"
+            android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+</LinearLayout>

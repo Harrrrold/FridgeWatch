@@ -13,6 +13,21 @@
         android:theme="@style/Theme.FridgeWatch"
         tools:targetApi="31">
         <activity
+            android:name=".TermsAndAgreementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashboardActivity"
             android:exported="true">
             <intent-filter>
